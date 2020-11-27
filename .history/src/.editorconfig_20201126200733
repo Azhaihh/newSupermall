@@ -1,0 +1,6 @@
+# 代码风格的配置
+root = true
+
+[*]
+charset = utf-8
+indent

@@ -1,0 +1,5 @@
+# 代码风格的配置
+root = true
+
+[*]
+charset
