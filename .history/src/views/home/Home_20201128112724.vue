@@ -1,37 +1,27 @@
 <template>
-    <!--
-         注意：Home组件里只放大的逻辑结构
-         比如：导航栏->轮播图->...
-         至于他们是如何实现的，，具体看各个子组件
-     -->
-
-
     <div id="home">
         <!-- 导航栏 -->
         <nav-bar class="home-nav">
             <div slot="center">购物街</div>
         </nav-bar>
 
-        <!-- 轮播图 -->
-        <!-- 注意：需要绑定数据 -->
-        <home-swiper :banners="banners"></home-swiper>
     </div>
 </template>
 
 <script>
 import NavBar from '../../components/common/navbar/NavBar'
-// 导入轮播图组件
-import HomeSwiper from './childComps/HomeSwiper'
-
 // 导入自定义请求函数
 import {getHomeMultiData} from '../../network/home'     
+// 导入轮播图组件
+import {Swiper,SwiperItem} from '../../components/common/swiper/index'
 
 export default {
     name:"Home",
     components: {
         // 注册组件，，每次导入新的组件均需在此注册
         NavBar,
-        HomeSwiper
+        Swiper,
+        SwiperItem
     },
     data(){
         // 存储请求返回的数据

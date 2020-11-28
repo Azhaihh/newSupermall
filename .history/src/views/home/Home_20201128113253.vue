@@ -1,20 +1,11 @@
 <template>
-    <!--
-         注意：Home组件里只放大的逻辑结构
-         比如：导航栏->轮播图->...
-         至于他们是如何实现的，，具体看各个子组件
-     -->
-
-
     <div id="home">
         <!-- 导航栏 -->
         <nav-bar class="home-nav">
             <div slot="center">购物街</div>
         </nav-bar>
 
-        <!-- 轮播图 -->
-        <!-- 注意：需要绑定数据 -->
-        <home-swiper :banners="banners"></home-swiper>
+        <home-swiper></home-swiper>
     </div>
 </template>
 
