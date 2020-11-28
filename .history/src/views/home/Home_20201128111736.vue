@@ -27,7 +27,7 @@ import {Swiper,SwiperItem} from '../../components/common/swiper/index'
 export default {
     name:"Home",
     components: {
-        // 注册组件，，每次导入新的组件均需在此注册
+        // 注册组件，，每次导入新的组件均需zai'ci
         NavBar,
         Swiper,
         SwiperItem

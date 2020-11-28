@@ -1,16 +1,13 @@
 <template>
     <div id="home">
-        <!-- 导航栏 -->
         <nav-bar class="home-nav">
             <div slot="center">购物街</div>
         </nav-bar>
 
-        <!-- 轮播图 -->
         <swiper>
             <swiper-item v-for="item in banners">
-                <!-- banners数据中有个属性是link -->
                 <a :href="item.link">
-                    <img :src="item.image" alt="">
+                    
                 </a>
             </swiper-item>
         </swiper>
@@ -22,15 +19,19 @@ import NavBar from '../../components/common/navbar/NavBar'
 // 导入自定义请求函数
 import {getHomeMultiData} from '../../network/home'     
 // 导入轮播图组件
-import {Swiper,SwiperItem} from '../../components/common/swiper/index'
+import {Swiper, SwiperItem} from '../../components/common/swiper/index'
+import Swiper from '../../components/common/swiper/Swiper.vue'
+import SwiperItem from '../../components/common/swiper/SwiperItem.vue'
 
 export default {
     name:"Home",
     components: {
-        // 注册组件，，每次导入新的组件均需在此注册
+        // 注册组件
         NavBar,
         Swiper,
         SwiperItem
+        SwiperItem
+        Swiper
     },
     data(){
         // 存储请求返回的数据

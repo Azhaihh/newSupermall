@@ -1,11 +1,9 @@
 <template>
     <div id="home">
-        <!-- 导航栏 -->
         <nav-bar class="home-nav">
             <div slot="center">购物街</div>
         </nav-bar>
 
-        <!-- 轮播图 -->
         <swiper>
             <swiper-item v-for="item in banners">
                 <!-- banners数据中有个属性是link -->
@@ -27,7 +25,7 @@ import {Swiper,SwiperItem} from '../../components/common/swiper/index'
 export default {
     name:"Home",
     components: {
-        // 注册组件，，每次导入新的组件均需在此注册
+        // 注册组件
         NavBar,
         Swiper,
         SwiperItem

@@ -1,0 +1,1 @@
+import {request} from './request'       //注意封装的文件
